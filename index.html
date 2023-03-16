@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Q1:Find the Smaller Angle</h2>
+    <pre>
+        Ans:
+        var Minimal_Angle = (h, m) => 
+{
+   h=h%12;
+   let hour = (h*360)/12 + (m*360)/(12*60);
+   let min = (m*360)/60;
+   let angle = Math.abs(hour-min);
+   
+   if(angle>180)
+   return 360-angle;
+   else
+   return angle;
+};
+ 
+    </pre>
+    <h2>Q2:Check whether the year is Leap year or not.</h2>
+    <pre>
+        Ans:
+        var Check_Leap = (year) => 
+{
+ if(year % 400 === 0)
+ return "Leap Year";
+ if(year % 100 === 0)
+  return "Non Leap Year";
+  if(year % 4 ===0)
+  return "Leap Year";
+  return "Non Leap Year";
+
+};
+ 
+    </pre>
+    <h2>Q3:Perfect Number Check.</h2>
+    <pre>
+        Ans:
+        var Perfect_Check = (N) => 
+{
+  var temp=0;
+  for(var i=1;i<=N/2;i++){
+    if(N%i===0){
+      temp+=i;
+    }
+  }
+        if(temp===N && temp!==0){
+          return "YES";
+        }
+        else{
+          return "NO"
+        }
+};
+ 
+    </pre>
+    <h2>Q4:Reverse a Number.</h2>
+    <pre>
+        Ans:
+        var Reverse_Number = (N) => 
+{
+ var digit,result=0;
+ while(N){
+   digit = N % 10;
+   result = (result * 10) + digit;
+   N=N/10|0;
+ }
+ return result
+};
+ 
+
+    </pre>
+    <h2>Q5:Substring Check.</h2>
+    <pre>
+        Ans:
+        var Substring_Check = (S1, S2) => 
+{
+let str = S1.indexOf(S2);
+if(str!==-1){
+  return "YES";
+}
+else{
+  return "NO";
+}
+};
+ 
+
+    </pre>
+</body>
+</html>
